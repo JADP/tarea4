@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-5">
+    <title>TAREA4</title>
+    <script>
+        // Solicitar al usuario que ingrese dos números
+        let numero1 = prompt("Ingrese el primer número:");
+        let numero2 = prompt("Ingrese el segundo número:");
+
+        // Convertir los valores ingresados a números
+        numero1 = Number(numero1);
+        numero2 = Number(numero2);
+
+        // Realizar un bucle de 5 interacciones
+        alert("USO DE BUCLE FOR Y CONDICION IF CON VALOR DE INGRESO CONSTANTE");
+        for (let i = 0; i < 5; i++) {
+            if (i==0){
+                var operacion = numero1 + numero2
+                alert(`Interacción ${i + 1} SUMA: ${numero1} +  ${numero2} = ${operacion}`);
+            }else if(i==1){
+                var operacion = numero1 - numero2
+                alert(`Interacción ${i + 1} RESTA: ${numero1} - ${numero2} = ${operacion}`);
+            }else if(i==2){
+                var operacion = numero1 * numero2
+                alert(`Interacción ${i + 1} MULTIPLICACION:  ${numero1} *  ${numero2} = ${operacion}`);
+            }else if(i==3){
+                var operacion = numero1 / numero2
+                alert(`Interacción ${i + 1} DIVISION:  ${numero1} /  ${numero2} = ${operacion}`);
+            }else{
+                var operacion = numero1 % numero2
+                alert(`Interacción ${i + 1} RESIDUO:  ${numero1} %  ${numero2} = ${operacion}`);
+            }
+            
+        }
+
+        alert("USO DE DO WHILE Y SWITCH CASE CON VALOR DE INGRESO CONSTANTE")
+        do {
+            opcion = prompt(
+                "Seleccione una opción:\n" +
+                "1. Sumar\n" +
+                "2. Restar\n" +
+                "3. Multiplicar\n" +
+                "4. Dividir\n" +
+                "5. Residuo\n" +
+                "6. Salir"
+            );
+
+            opcion = Number(opcion);
+
+            if (opcion >= 1 && opcion <= 5) {
+
+                switch (opcion) {
+                    case 1:
+                        resultado = numero1 + numero2;
+                        alert(`Resultado de la suma: ${numero1} + ${numero2} = ${resultado}`);
+                        break;
+                    case 2:
+                        resultado = numero1 - numero2;
+                        alert(`Resultado de la resta: ${numero1} - ${numero2} = ${resultado}`);
+                        break;
+                    case 3:
+                        resultado = numero1 * numero2;
+                        alert(`Resultado de la multiplicación: ${numero1} * ${numero2} = ${resultado}`);
+                        break;
+                    case 4:
+                        resultado = numero1 / numero2;
+                        alert(`Resultado de la división: ${numero1} / ${numero2} = ${resultado}`);
+                        break;
+                    case 5:
+                        resultado = numero1 % numero2;
+                        alert(`Resultado del residuo: ${numero1} % ${numero2} = ${resultado}`);
+                        break;
+                }
+            } else if (opcion !== 6) {
+                alert("Opción no válida. Por favor, seleccione una opción del 1 al 6.");
+            }
+        } while (opcion !== 6);
+
+        alert("SALIO CON EXITO ;)");
+</script>
+        
+</script>
+</head>
+<body>
+    
+</body>
+</html>
